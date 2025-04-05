@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Supercars | Home</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background-color: #0d0d0d;
+      color: white;
+    }
+
+    header {
+      background: #111;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.8);
+    }
+
+    .logo {
+      font-size: 1.8rem;
+      color: #e60000;
+      font-weight: bold;
+      letter-spacing: 2px;
+    }
+
+    nav a {
+      color: white;
+      margin-left: 2rem;
+      text-decoration: none;
+      font-size: 1rem;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #e60000;
+    }
+
+    .hero {
+      background: url('https://images.unsplash.com/photo-1617692855025-b7c802fa1ab9?auto=format&fit=crop&w=1920&q=80') no-repeat center center/cover;
+      height: 90vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      background: rgba(0, 0, 0, 0.7);
+      padding: 1rem 2rem;
+      border-radius: 10px;
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 2rem;
+      margin: 2rem 0 1rem;
+      color: #e60000;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.5rem;
+      padding: 0 2rem 2rem;
+    }
+
+    .card {
+      background: #1a1a1a;
+      border-radius: 10px;
+      overflow: hidden;
+      transition: transform 0.3s ease;
+      box-shadow: 0 0 10px rgba(255, 0, 0, 0.2);
+    }
+
+    .card:hover {
+      transform: scale(1.03);
+    }
+
+    .card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .card-content {
+      padding: 1rem;
+    }
+
+    .card-content h3 {
+      color: #e60000;
+      margin-bottom: 0.5rem;
+    }
+
+    .card-content p {
+      font-size: 0.9rem;
+      color: #ccc;
+    }
+
+    footer {
+      background: #111;
+      text-align: center;
+      padding: 1rem;
+      color: #777;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">SUPERCARS</div>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">Inventory</a>
+      <a href="#">About</a>
+      <a href="#">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>Drive Your Dream Supercar</h1>
+  </section>
+
+  <h2 class="section-title">Featured Cars</h2>
+  <section class="cards">
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1617127365659-0e1f43cfa6b4?auto=format&fit=crop&w=800&q=80" alt="Ferrari">
+      <div class="card-content">
+        <h3>Ferrari 488 GTB</h3>
+        <p>Exhilarating performance, Italian design, and top-tier speed — experience luxury redefined.</p>
+      </div>
+    </div>
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1604948501466-b0aa5c02a52f?auto=format&fit=crop&w=800&q=80" alt="Lamborghini">
+      <div class="card-content">
+        <h3>Lamborghini Aventador</h3>
+        <p>Bold, aggressive, and thrilling — the Aventador redefines the future of speed and style.</p>
+      </div>
+    </div>
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1571607389017-1792c57c81a2?auto=format&fit=crop&w=800&q=80" alt="Bugatti">
+      <div class="card-content">
+        <h3>Bugatti Chiron</h3>
+        <p>The ultimate hypercar. Power meets elegance in a machine built to break every limit.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2025 Supercars Inc. All rights reserved.
+  </footer>
+</body>
+</html>
