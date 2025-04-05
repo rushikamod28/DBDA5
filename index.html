@@ -13,8 +13,8 @@
     }
 
     body {
-      background-color: #0d0d0d;
-      color: white;
+      background: linear-gradient(135deg, #0f0f0f, #1a1a1a);
+      color: #fff;
     }
 
     header {
@@ -23,24 +23,22 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
       position: sticky;
       top: 0;
-      z-index: 1000;
-      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.8);
+      z-index: 100;
     }
 
     .logo {
       font-size: 1.8rem;
       color: #e60000;
       font-weight: bold;
-      letter-spacing: 2px;
     }
 
     nav a {
-      color: white;
+      color: #ccc;
       margin-left: 2rem;
       text-decoration: none;
-      font-size: 1rem;
       transition: color 0.3s ease;
     }
 
@@ -49,19 +47,20 @@
     }
 
     .hero {
-      background: url('https://images.unsplash.com/photo-1617692855025-b7c802fa1ab9?auto=format&fit=crop&w=1920&q=80') no-repeat center center/cover;
-      height: 90vh;
+      height: 85vh;
+      background: linear-gradient(145deg, #1a1a1a, #333);
       display: flex;
       justify-content: center;
       align-items: center;
       text-align: center;
+      padding: 2rem;
     }
 
     .hero h1 {
       font-size: 3rem;
-      background: rgba(0, 0, 0, 0.7);
-      padding: 1rem 2rem;
-      border-radius: 10px;
+      max-width: 700px;
+      line-height: 1.3;
+      color: #e60000;
     }
 
     .section-title {
@@ -73,94 +72,88 @@
 
     .cards {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 1.5rem;
       padding: 0 2rem 2rem;
     }
 
     .card {
-      background: #1a1a1a;
-      border-radius: 10px;
-      overflow: hidden;
+      background: #222;
+      padding: 1.5rem;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(255, 0, 0, 0.1);
       transition: transform 0.3s ease;
-      box-shadow: 0 0 10px rgba(255, 0, 0, 0.2);
     }
 
     .card:hover {
-      transform: scale(1.03);
+      transform: translateY(-5px);
+      box-shadow: 0 0 20px rgba(255, 0, 0, 0.2);
     }
 
-    .card img {
-      width: 100%;
-      height: 200px;
-      object-fit: cover;
-    }
-
-    .card-content {
-      padding: 1rem;
-    }
-
-    .card-content h3 {
-      color: #e60000;
+    .card h3 {
+      color: #fff;
       margin-bottom: 0.5rem;
     }
 
-    .card-content p {
-      font-size: 0.9rem;
-      color: #ccc;
+    .card p {
+      color: #aaa;
+      font-size: 0.95rem;
+    }
+
+    .card .icon {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      display: block;
     }
 
     footer {
-      background: #111;
       text-align: center;
-      padding: 1rem;
-      color: #777;
+      padding: 1.2rem;
+      background: #111;
+      color: #888;
       font-size: 0.9rem;
     }
   </style>
 </head>
 <body>
+
   <header>
-    <div class="logo">RK_SUPERCARS</div>
+    <div class="logo">SUPERCARS</div>
     <nav>
       <a href="#">Home</a>
-      <a href="#">Inventory</a>
+      <a href="#">Cars</a>
       <a href="#">About</a>
       <a href="#">Contact</a>
     </nav>
   </header>
 
   <section class="hero">
-    <h1>Drive Your Dream Supercar with us !!!!!</h1>
+    <h1>Experience Power, Precision & Prestige – Only with Supercars 🏎️</h1>
   </section>
 
-  <h2 class="section-title">Featured Cars</h2>
+  <h2 class="section-title">🔥 Featured Models</h2>
   <section class="cards">
     <div class="card">
-      <img src="https://images.unsplash.com/photo-1617127365659-0e1f43cfa6b4?auto=format&fit=crop&w=800&q=80" alt="Ferrari">
-      <div class="card-content">
-        <h3>Ferrari 488 GTB</h3>
-        <p>Exhilarating performance, Italian design, and top-tier speed — experience luxury redefined.</p>
-      </div>
+      <span class="icon">🚗</span>
+      <h3>Speedster V8</h3>
+      <p>Turbocharged thrill meets classic comfort. Built for the road and beyond.</p>
     </div>
     <div class="card">
-      <img src="https://images.unsplash.com/photo-1604948501466-b0aa5c02a52f?auto=format&fit=crop&w=800&q=80" alt="Lamborghini">
-      <div class="card-content">
-        <h3>Lamborghini Aventador</h3>
-        <p>Bold, aggressive, and thrilling — the Aventador redefines the future of speed and style.</p>
-      </div>
+      <span class="icon">🏎️</span>
+      <h3>Phantom Racer</h3>
+      <p>Ultra-lightweight, insane acceleration. Rule the streets with style and speed.</p>
     </div>
     <div class="card">
-      <img src="https://images.unsplash.com/photo-1571607389017-1792c57c81a2?auto=format&fit=crop&w=800&q=80" alt="Bugatti">
-      <div class="card-content">
-        <h3>Bugatti Chiron</h3>
-        <p>The ultimate hypercar. Power meets elegance in a machine built to break every limit.</p>
-      </div>
+      <span class="icon">🚘</span>
+      <h3>Shadow GT</h3>
+      <p>A blend of aggressive performance and luxury. Perfect for everyday speed lovers.</p>
     </div>
   </section>
 
   <footer>
-    &copy; 2025 Supercars Inc. All rights reserved.
+    &copy; 2025 Supercars Inc. | Built for Speed. Driven by Passion.
   </footer>
+
 </body>
 </html>
+
